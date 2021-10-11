@@ -1,67 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
-
-  <div class="stuff">
-    <br>
     
-    <h1 style="text-align:center">CV</h1>
+    <div>
+        <h1>Currency Converter</h1>
 
-    <hr />
+        <label for="dollars">Amount in US Dollars: </label>
+        <input type="text" name="" id="dollars" placeholder="Dollars">
 
-    <h1>Muhammad Saleh</h1>
+        <br>
+        <br>
 
-    <!-- Interests -->
-    <h3>Interests</h3>
-    <ul>
-      <li>Data Science</li>
-      <li>Artficial Intelligence</li>
-      <li>Programming</li>
-      <li>Computer Science</li>
-    </ul>
-    
-    <!-- Skills -->
-    <h3>Skills</h3>
-    <ul>
-      <li>Web Design with HTML & CSS</li>
-      <li>Machine Learning</li>
-      <li>Databases</li>
-    </ul>
-    
-    <!-- Education -->
-    <h3>Education</h3>
-    <ul>
-      <a href="https://shamsischool.edu.pk/">
-        <li>Shamsi Society Model School</li>
-      </a>
-      <a href="https://web.facebook.com/CanttCollegeKarachiOfficial/?_rdc=1&_rdr">
-        <li>Govt. degree Science and Commerce Malir Cantt</li>
-      </a>
-      <a href="https://iiee.edu.pk/">
-        <li>Institute of Induatril Electrinics Engineering(IIEE)</li>
-      </a>
-    </ul>
+        <label for="rupees">Amount in Pak Rupees: </label>
+        <input type="text" name="" id="rupees" placeholder="Rupees">
 
-    <!-- Experience -->
-    <h3>Experience</h3>
-    <p style="margin-left: 40px">No exprience, Fresh graduate</p>
+        <br>
+        <br>
 
-    <!-- Extracurriculars -->
-    <h3>Extracurriculars</h3>
-    <ul>
-      <li>Aviation Geek</li>
-      <li>Book Reading</li>
-    </ul>
-  </div>
+        <button onclick=convert()>Convert</button>
+    </div>
+
+    <div>
+        <h1>Tell me percentage and I will return you a grade</h1>
+
+        <label for="grade">Enter percentage</label>
+        <input type="text" name="" id="grade" placeholder="Enter percentage">
+
+        <br>
+        <br>
+
+        <button onclick=grade()>Tell me grade</button>
+
+        <h2 id="returnedGrade"></h2>
+    </div>
+
+    <div>
+        <h1>Tell me temperature and I will sugest you what to wear when going outside</h1>
+
+        <label for="temperature">Enter temperature</label>
+        <input type="text" name="" id="temperature" placeholder="Enter temperature">
+
+        <br>
+        <br>
+
+        <button onclick=whatToWear()>Suggest</button>
+
+        <h2 id="suggestedWearing"></h2>
+    </div>
+
+    <script src="app.js"></script>
 
 </body>
-
 </html>
