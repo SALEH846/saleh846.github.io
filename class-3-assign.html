@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <h1>Currency Converter</h1>
+
+        <label for="dollars">Amount in US Dollars: </label>
+        <input type="text" name="" id="dollars" placeholder="Dollars">
+
+        <br>
+        <br>
+
+        <label for="rupees">Amount in Pak Rupees: </label>
+        <input type="text" name="" id="rupees" placeholder="Rupees">
+
+        <br>
+        <br>
+
+        <button onclick=convert()>Convert</button>
+    </div>
+
+    <div>
+        <h1>Tell me percentage and I will return you a grade</h1>
+
+        <label for="grade">Enter percentage</label>
+        <input type="text" name="" id="grade" placeholder="Enter percentage">
+
+        <br>
+        <br>
+
+        <button onclick=grade()>Tell me grade</button>
+
+        <h2 id="returnedGrade"></h2>
+    </div>
+
+    <div>
+        <h1>Tell me temperature and I will sugest you what to wear when going outside</h1>
+
+        <label for="temperature">Enter temperature</label>
+        <input type="text" name="" id="temperature" placeholder="Enter temperature">
+
+        <br>
+        <br>
+
+        <button onclick=whatToWear()>Suggest</button>
+
+        <h2 id="suggestedWearing"></h2>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
