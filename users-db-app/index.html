@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users DB app</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        .row{
+            display: flex;
+            flex-direction: row;
+        }
+        .column{
+            padding: 0 30px;
+        }
+    </style>
+</head>
+<body onload="getUsers()">
+    <div class="row">
+        <div class="column">
+            <h1>Add a new User</h1>
+            <table>
+                <tr>
+                    <td>
+                        <label for="name_post">Enter name</label>
+                    </td>
+                    <td>
+                        <input type="text" id="name_post">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email_post">Enter email</label>
+                    </td>
+                    <td>
+                        <input type="text" id="email_post">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="address_post">Enter address</label>
+                    </td>
+                    <td>
+                        <input type="text" id="address_post">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button onclick="setUser()">POST</button>
+                    </td>
+                </tr>
+            </table>
+            <h1>Get User's data</h1>
+            <table>
+                <tr>
+                    <td>
+                        <label for="id_get">Enter ID</label>
+                    </td>
+                    <td>
+                        <input type="text" id="id_get">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button onclick="getUser()">GET</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="column">
+            <h1>Change User's data</h1>
+            <table>
+                <tr>
+                    <td>
+                        <label for="id_put">Enter ID</label>
+                    </td>
+                    <td>
+                        <input type="text" id="id_put">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="name_put">Enter name</label>
+                    </td>
+                    <td>
+                        <input type="text" id="name_put">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email_put">Enter email</label>
+                    </td>
+                    <td>
+                        <input type="text" id="email_put">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="address_put">Enter address</label>
+                    </td>
+                    <td>
+                        <input type="text" id="address_put">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button onclick="editUser()">PUT</button>
+                    </td>
+                </tr>
+            </table>
+            <h1>Delete a user</h1>
+            <table>
+                <tr>
+                    <td>
+                        <label for="id_delete">Enter ID</label>
+                    </td>
+                    <td>
+                        <input type="text" id="id_delete">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button onclick="deleteUser()">DELETE</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <table border="2px" cellspacing="0" cellpadding="2px">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody id="dataRender"></tbody>
+    </table>
+
+   
+</body>
+    <script src="app.js"></script>
+</html>
