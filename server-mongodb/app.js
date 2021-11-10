@@ -3,7 +3,7 @@ const showData = data => {
     dataRender.innerHTML = "";
     data.map(userData => {
         if (userData.name != undefined) {
-            dataRender.innerHTML += `<tr><td>${userData.name}</td><td>${userData.email}</td><td>${userData.address}</td></tr>`
+            dataRender.innerHTML += `<tr><td>${userData._id}</td><td>${userData.name}</td><td>${userData.email}</td><td>${userData.address}</td></tr>`
         }
     });
 }
