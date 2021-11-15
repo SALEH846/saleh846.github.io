@@ -7,6 +7,8 @@
 //     console.log(index);
 //  }
 
+var idForDeleteUser = "";
+
 function getIdForDelete(element) {
     // alert("row" + element.parentNode.parentNode.rowIndex +
     //    " - column" + element.parentNode.cellIndex);
@@ -18,7 +20,8 @@ function getIDFromColForDelete(rowNumber) {
     var table = document.getElementById("dataTable");
     let row = table.rows[rowNumber];
     let colValue = row.cells[0].innerText;
-    deleteUser(colValue);
+    idForDeleteUser = colValue;
+    // deleteUser(colValue);
 }
 
 var idForeditUser = "";
@@ -66,7 +69,7 @@ const showData = data => {
                     Edit
                 </button>
                 <span> </span>
-                <button class="btn btn-danger" onclick="getIdForDelete(this)">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" onclick="getIdForDelete(this)">
                     Delete
                 </button>
             </td>
@@ -102,7 +105,7 @@ const showDataOne = data => {
                 Edit
             </button>
             <span> </span>
-            <button class="btn btn-danger" onclick="getIdForDelete(this)">
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" onclick="getIdForDelete(this)">
                 Delete
             </button>
         </td>
@@ -155,8 +158,8 @@ const getUser = () => {
     
 }
 
-const deleteUser = i => {
-    axios.delete(`https://server-mogodb.herokuapp.com/user/${i}`)
+const deleteUser = () => {
+    axios.delete(`https://server-mogodb.herokuapp.com/user/${idForDeleteUser}`)
         .then(response => {
             getUsers();
             // console.log(response);
